@@ -1,0 +1,585 @@
+body{
+  margin: 0;
+  padding:0;
+  background-color: black;
+  font-family: Roboto, Tahoma;
+  -webkit-animation: fadein 1s;
+  overflow-x: hidden;
+}
+
+/* CSS for the Top Menubar */
+#topmenu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgb(250, 225, 101);
+  box-shadow: 0px 2px 8px;
+}
+
+#logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -160px !important;
+  display: block;
+  transition: 0.2s ease-out;
+}
+
+#logo:hover {
+  transform: scale(1.1);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 30px 40px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* CSS for the Menubar dropdowns */
+.dropdown {float: left; overflow: hidden;}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #fcca02;
+  min-width: 200px;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #FAE165;}
+
+.dropdown:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
+  top: 84px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* CSS for the Parallax effects used */
+.video-parallax {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  filter: blur(10px);
+}
+
+.video-greeting {
+  text-align: center;
+  position: relative;
+  top: 240px;
+  font-size: 25px;
+  color: #111;
+  font-family: Tahoma
+}
+
+.home-greeting {
+  text-align: center;
+  position: relative;
+  top: 280px;
+  font-size: 20px;
+  font-family: Tahoma;
+  color: #fff;
+  top: 200px;
+}
+
+.image-parallax {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  z-index: 2;
+}
+
+.image-greeting {
+  text-align: center; 
+  position: relative; 
+  margin: auto; 
+  background-color: rgba(250, 225, 101, 0.9); 
+  top: 603px;
+  color: #111; 
+  font-size: 50px; 
+  padding: 20px; 
+  z-index: 2;
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 400px solid transparent;
+  border-bottom: 400px solid transparent;
+  float: left;
+  border-left: 400px solid rgba(1,1,1,0.3);
+}
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 400px solid transparent;
+  border-bottom: 400px solid transparent;
+  float: right;
+  border-right: 400px solid rgba(1,1,1,0.3);
+}
+
+#spinny {
+  transition: 1.1s ease;
+}
+
+#spinny:hover {
+  transform: rotate(360deg) scale(0.85);
+}
+
+/* CSS to signify the body content of the pages */
+.content {
+  -webkit-animation: colorchange 50s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.shopcontent {
+  width: 80%;
+  text-align: left;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  float: right;
+}
+
+/* CSS for the shop's sidebar */
+#sidebar {
+  height:100%;
+  width:20%;
+  background-color:#111;
+  position: fixed;
+  z-index:-1;
+}
+
+#sidebar a {
+  text-decoration: none;
+  padding: 8px 22px;
+  display: block;
+  font-size: 20px;
+  color: white;
+}
+
+#sidebar img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#sidebar a:hover {
+  border: 5px #fcca02;
+  border-style: none solid;
+}
+
+/* CSS for the Shop display */
+#product {
+  margin: auto;
+}
+
+#product img {
+  object-fit: cover;
+  width:300px;
+  height:300px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  position: relative;
+  opacity: 1;
+}
+
+#product img:hover {
+  opacity: 0.3;
+  filter: blur(0.8px);
+  transform: scale(1.1);
+}
+
+#product h2 {
+  position: absolute;
+  padding: 60px;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* CSS for the Bottom Banner */
+.bottombanner {
+    position: relative;
+    height: auto;
+    bottom: 0px;
+}
+
+.bottombannercaption {
+    position: absolute;
+    background-color: rgba(250, 225, 101, 0.85);
+    color: #111;
+    width: 100%;
+    text-align: left;
+    z-index: 2;
+    bottom: 0px;
+}
+
+.bottombannercaption a {
+  text-decoration: underline;
+  color: black
+}
+
+.bottombannercaption a:hover {
+  text-decoration: none;
+}
+
+.storebottombannercaption a:hover {
+  text-decoration: none;
+}
+
+.storebottombannercaption a {
+  text-decoration: underline;
+  color: black
+}
+
+.storebottombanner {
+    position: relative;
+    height: auto;
+    right: 25%;
+    bottom: 0px;
+}
+
+.storebottombannercaption {
+    position: absolute;
+    background-color: rgba(250, 225, 101, 0.85);
+    color: #111;
+    width: 125%;
+    text-align: left;
+    z-index: 2;
+    bottom: 0px;
+}
+
+/* Store Links */
+#storelinks a {
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  color: #111;
+}
+
+#storelinks td:hover {
+  transform: scale(1.3);
+}
+
+#storelinks td {
+  transition: .3s ease;
+}
+
+/* Information and Content on pages */
+.info {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+}
+
+.info h1 {
+  font-family: trebuchet ms;
+  font-style: italic;
+  font-size: 80px;
+  font-weight: normal;
+}
+
+.info p {
+  line-height: 2;
+  text-align: justify;
+  font-size: 20px;
+  padding: 30px;
+}
+
+.info img {
+  margin: 30px;
+  transition: 0.5s;
+}
+
+.info img:hover {
+  border-radius: 8%;
+  filter: brightness(85%);
+}
+
+.info .map {
+  display: inline-block;
+}
+
+.info a {
+  color: black;
+  text-decoration: underline;
+}
+
+.info a:hover {
+  text-decoration: none;
+}
+
+/* Subscribe Bottom Part */
+.subscribe {
+  margin: auto;
+  background-color: #111;
+  width: 100%;
+  height: 350px;
+  text-align: left;
+}
+
+.subscribe h1 {
+  color: #fff; 
+  font-size: 50px; 
+  font-style: italic; 
+  font-weight: normal
+}
+
+.subscribe input {
+  font-size: 20px;
+}
+
+.subscribe button {
+  font-size: 30px;
+  background-color: #FAE165;
+}
+
+/* CSS to make the forms */
+.sform {
+  height: 86px;
+  transition: 1.5s ease; 
+}
+
+.sform:hover {
+  height: 1400px;
+}
+
+.details{
+  border-style: none none solid;
+  transition: 0.4s ease;
+  width: 100%;
+  font-size: 1.5em;
+  padding: 5px;
+  margin: 15px;
+}
+
+.details:focus{
+  background-color: #FAE165;
+  border: none none solid;
+  border-width: 5px;
+}
+
+
+/* CSS for the Shopping Cart Display */
+.cart {
+  width: 80%;
+  background-color: #fff2b5; 
+  height: auto;
+  padding: 20px 10% 20px 10%; 
+  height: 300px; 
+  line-height: 2;
+}
+
+.cartt {
+  width: 80%;
+  background-color: #fff; 
+  height: auto;
+  padding: 20px 10% 20px 10%; 
+  height: 300px; 
+  line-height: 2;
+}
+
+.cartpart {
+  float: right;
+  width: auto;
+  text-align: center
+}
+
+.cart h2{
+  font-weight: normal;
+}
+
+.cart img {
+  float: left;
+  margin-right: 20px;
+  border: solid 3px;
+  transition: 0.2s ease-out;
+}
+
+.cart img:hover {
+  transform: scale(1.05);
+}
+
+.cartt h2{
+  font-weight: normal;
+}
+
+.cartt img {
+  float: left;
+  margin-right: 20px;
+  border: solid 3px;
+  transition: 0.2s ease-out;
+}
+
+.cartt img:hover {
+  transform: scale(1.05);
+}
+
+.cartt a:hover {
+  text-decoration: underline
+}
+.cartt a {
+  text-decoration: none;
+  color: black;
+}
+
+.cart a:hover {
+  text-decoration: underline
+}
+.cart a {
+  text-decoration: none;
+  color: black;
+}
+
+/* CSS for the Cart Links Below */
+.cartlinks {
+  background-color: black; 
+  width: 90%; 
+  color: white; 
+  padding: 10px 5%; 
+  font-weight: normal; 
+  height: 150px
+}
+
+.cartlinks a {
+  text-decoration: none;
+  color: white;
+}
+
+.cartlinks a:hover {
+  color: #FAE165;
+}
+
+.cartlinks .right h1 {
+  font-weight: normal;
+  font-style: italic
+}
+
+/* CSS for Services Link */
+.servicelink {
+  text-decoration: none;
+  color: white;
+  line-height: 1;
+}
+
+.servicelink:hover{
+  color: #fae165;
+  font-weight: bold;
+}
+
+/* CSS for the Button Magic (From hover.css)*/
+.button-magic {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.button-magic:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fcca02;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.button-magic:hover, .button-magic:focus, .button-magic:active {
+  color: white;
+}
+.button-magic:hover:before, .button-magic:focus:before, .button-magic:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes colorchange {
+  0%   {background: #fffc93;}
+  30%  {background: #fff;}
+  100%  {background: #fffc93;}
+}
+
+.staff {
+  width: 310px;
+  height: 310px;
+  object-fit: cover;
+  border: solid;
+}
+
+.leaders {
+  width: 685px;
+  height: 310px;
+  object-fit: cover;
+  border: solid
+}
+
+.stafftable {
+  text-align: center;
+}
+
+.titlestaff {
+  font-size: 25px;
+}
+
+.contacts h2{
+  font-size: 30px;
+  font-style: italic;
+  margin-left: 50px;
+}
+
+.contacts h3{
+  font-size: 20px;
+  margin-left: 70px;
+}
